@@ -225,7 +225,6 @@ exports.handler = Alexa.SkillBuilders.custom()
         LaunchRequestHandler,
         NextIntentHandler,  //  add custom intents and remove any unnecessary ones (e.g. hello world)
         RemainingIntentHandler, //  add custom intents and remove any unnecessary ones (e.g. hello world)
-        HelloWorldIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler,
