@@ -15,7 +15,7 @@ const doneText = 'Go Bearcats - Goodbye!';
 const errorText = "Sorry, I could not understand. Please try again.";
 
 // games
-const games = require('./games.json')
+const games = require('./games')
 
 // helper function - get next 
 function getNext(now, location) {
