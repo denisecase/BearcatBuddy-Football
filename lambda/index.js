@@ -84,7 +84,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speechText = 'Welcome from ' + skillName + '. Say When is the next home game? or How many games remaining?';
+        const speakOutput = 'Welcome from ' + skillName + '. Say When is the next home game? or How many games remaining?';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
