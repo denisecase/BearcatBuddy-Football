@@ -29,7 +29,7 @@ function getNext(now, location) {
         const d = new Date(i.year, i.month - 1, i.day, i.hour, i.minute, 0);
         const t = (0 === i.hour) ? "a time to be determined" : d.toLocaleTimeString('en-US')
         if (d > now) {
-            if (location == null) {
+            if (location === null) {
                 ans = 'The next ' + gender + ' ' + sport + ' game is ' + d.toDateString() + ' at ' + t + ' in ' + p + ".";
                 return ans;
             }
