@@ -22,9 +22,17 @@
                     ]
                 },
                 "textContent": {
-                    "primaryText": {
+                    "headerTitle": {
                         "type": "PlainText",
                         "text": "Bearcat Buddy"
+                    },
+                    "headerSubtitle": {
+                        "type": "PlainText",
+                        "text": ""
+                    },
+                    "primaryText": {
+                        "type": "PlainText",
+                        "text": ""
                     }
                 },
                 "logoUrl": "",

@@ -131,7 +131,9 @@ const NextIntentHandler = {
             speechText = `Hmm...I can't help with that one. Try asking ${intentText1} or ${intentText2}`;
         }
         if (Alexa.getSupportedInterfaces(handlerInput.requestEnvelope)['Alexa.Presentation.APL']) {
-            mm.datasources.headlineTemplateData.properties.hintText = repromptText
+            mm.datasources.headlineTemplateData.properties.textContent.headerTitle.text = "";
+            mm.datasources.headlineTemplateData.properties.textContent.headerSubtitle.text = speechText;
+            mm.datasources.headlineTemplateData.properties.hintText = repromptText;
             const aplDirective = mm;
             handlerInput.responseBuilder.addDirective(aplDirective);
         }
@@ -162,7 +164,9 @@ const RemainingIntentHandler = {
             speechText = `Hmm...I can't help with that one. Try asking ${intentText1} or ${intentText2}`;
         }
         if (Alexa.getSupportedInterfaces(handlerInput.requestEnvelope)['Alexa.Presentation.APL']) {
-            mm.datasources.headlineTemplateData.properties.hintText = repromptText
+            mm.datasources.headlineTemplateData.properties.textContent.headerTitle.text = "";
+            mm.datasources.headlineTemplateData.properties.textContent.headerSubtitle.text = speechText;
+            mm.datasources.headlineTemplateData.properties.hintText = repromptText;
             const aplDirective = mm;
             handlerInput.responseBuilder.addDirective(aplDirective);
         }
@@ -184,6 +188,8 @@ const HelpIntentHandler = {
         // const speakOutput = 'You can say hello to me! How can I help?';
         const speakOutput = helpText;
         if (Alexa.getSupportedInterfaces(handlerInput.requestEnvelope)['Alexa.Presentation.APL']) {
+            mm.datasources.headlineTemplateData.properties.textContent.headerTitle.text = "";
+            mm.datasources.headlineTemplateData.properties.textContent.headerSubtitle.text = "";
             mm.datasources.headlineTemplateData.properties.hintText = helpText
             const aplDirective = mm;
             handlerInput.responseBuilder.addDirective(aplDirective);
@@ -205,6 +211,8 @@ const CancelAndStopIntentHandler = {
         // const speakOutput = 'Goodbye!';
         const speakOutput = doneText;
         if (Alexa.getSupportedInterfaces(handlerInput.requestEnvelope)['Alexa.Presentation.APL']) {
+            mm.datasources.headlineTemplateData.properties.textContent.headerTitle.text = "";
+            mm.datasources.headlineTemplateData.properties.textContent.headerSubtitle.text = "";
             mm.datasources.headlineTemplateData.properties.hintText = doneText
             const aplDirective = mm;
             handlerInput.responseBuilder.addDirective(aplDirective);
@@ -229,6 +237,8 @@ const FallbackIntentHandler = {
         // const speakOutput = 'Sorry, I don\'t know about that. Please try again.';
         const speakOutput = helpText;
         if (Alexa.getSupportedInterfaces(handlerInput.requestEnvelope)['Alexa.Presentation.APL']) {
+            mm.datasources.headlineTemplateData.properties.textContent.headerTitle.text = "";
+            mm.datasources.headlineTemplateData.properties.textContent.headerSubtitle.text = "";
             mm.datasources.headlineTemplateData.properties.hintText = helpText
             const aplDirective = mm;
             handlerInput.responseBuilder.addDirective(aplDirective);
@@ -290,6 +300,8 @@ const ErrorHandler = {
         const speakOutput = errorText;
         console.log(`~~~~ Error handled: ${JSON.stringify(error)}`);
         if (Alexa.getSupportedInterfaces(handlerInput.requestEnvelope)['Alexa.Presentation.APL']) {
+            mm.datasources.headlineTemplateData.properties.textContent.headerTitle.text = "";
+            mm.datasources.headlineTemplateData.properties.textContent.headerSubtitle.text = "";
             mm.datasources.headlineTemplateData.properties.hintText = errorText;
             const aplDirective = mm;
             handlerInput.responseBuilder.addDirective(aplDirective);
